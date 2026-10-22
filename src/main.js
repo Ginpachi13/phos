@@ -101,6 +101,7 @@ Promise.all([Promise.allSettled(jobs), minTime]).then(async () => {
   html.classList.add('ui-on');
   $('.main-title-container').classList.add('show');
   subtitle.classList.add('show');
+  if (!started) landingOn(true);   // the signup screen is the landing page; the story starts on scroll or PLAY
 
 });
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -223,10 +224,17 @@ addEventListener('pointermove', (e) => {
 }, { passive: true });
 if (touch) { place(startBtn, innerWidth / 2, innerHeight * 0.74); }
 
+let landing = false;
+function landingOn(on) {
+  landing = on;
+  endScreen.classList.toggle('show', on); logoHeader.classList.toggle('end', on);
+  html.classList.toggle('landing', on);
+}
 function begin() {
   if (started) return;
   started = true;
   startBtn.classList.remove('show'); startBtn.classList.add('hide');
+  landingOn(false);
   lenis.start();
   html.classList.add('begun');
   sound.start();
@@ -236,7 +244,7 @@ function begin() {
 startBtn.addEventListener('click', begin);
 ['pointerdown', 'keydown', 'touchend'].forEach((t) => addEventListener(t, () => sound.unlock && sound.unlock(), { passive: true }));
 // a click anywhere on the title also starts, so a missed click never strands the reader
-addEventListener('click', (e) => { if (!started && titleReady && !e.target.closest('header, .join-panel, .chapter-strip')) { begin(); goTo(1); } });
+addEventListener('click', (e) => { if (!started && titleReady && !e.target.closest('header, .join-panel, .chapter-strip, #end-screen')) { begin(); goTo(1); } });
 
 /* ---------- sound toggle ---------- */
 $('[data-sound]').addEventListener('click', (e) => {
@@ -385,7 +393,7 @@ function raf(now) {
     const nx = CHAPTERS[a + 1]; $('.sh-text').textContent = nx ? `NEXT · ${nx.rail}` : 'THE END';
   }
   window.__phos = { y, pos, a, local, endShown, started, step, gliding, playing };
-  stage.frame(now / 1000, a, local, mix, { intro, pull, kick, dir: gliding ? dir : 0, vel: Math.min(1, Math.abs(lenis.velocity) / 45), travel: pos + pull * 0.06, play: intro === 1, cursor: !touch, rate: started ? 0.27 : 0.5, open: atEnd ? 1 : 0 });
+  stage.frame(now / 1000, a, local, mix, { intro, pull, kick, dir: gliding ? dir : 0, vel: Math.min(1, Math.abs(lenis.velocity) / 45), travel: pos + pull * 0.06, play: intro === 1, cursor: !touch, rate: started ? 0.27 : 0.5, open: (atEnd || landing) ? 1 : 0 });
   sound.update(a, local);
   requestAnimationFrame(raf);
 }
