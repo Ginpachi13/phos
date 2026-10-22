@@ -1,0 +1,23 @@
+{
+  "name": "phos-site",
+  "version": "1.0.0",
+  "description": "Phos home page: a scroll story in light",
+  "scripts": {
+    "dev": "vite --port 7911",
+    "build": "vite build",
+    "preview": "vite preview --port 7912"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "three": "^0.169.0"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
