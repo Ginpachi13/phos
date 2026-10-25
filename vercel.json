@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.phos-community.com" }],
+      "destination": "https://phos-community.com/$1",
+      "permanent": true
+    }
+  ]
+}
