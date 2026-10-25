@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Food and Drinks · phos</title>
+  <meta name="description" content="Places worth the trip: where to eat and drink around the world, recommended by people who have been.">
+  <meta name="theme-color" content="#030304">
+  <style>html,body{background:#030304;color:#F3EBD8}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./food.css">
+</head>
+<body>
+  <nav class="top-nav" aria-label="Site">
+    <a href="/about">About</a><a href="/library/">Library</a><a href="/journal">Journal</a><a href="/videos">Videos</a><a href="/art-and-history">Art and History</a><a href="/services">Services</a><a href="/food-and-drinks/" aria-current="page">Food and Drinks</a><a href="/contact">Contact</a>
+  </nav>
+  <a class="home" href="/" aria-label="phos home">
+    <svg viewBox="0 0 260 64" aria-hidden="true"><path class="lens" d="M4 32 Q130 -4 256 32 Q130 68 4 32Z" /><text x="130" y="43" text-anchor="middle">phos</text></svg>
+  </a>
+
+  <header class="hero">
+    <div class="beam b1" aria-hidden="true"></div>
+    <div class="beam b2" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="eyebrow">φῶς · Food and Drinks</p>
+      <h1>Where to eat and drink, <em>around the world.</em></h1>
+      <p class="lede">Places worth the trip, recommended by people who have been.</p>
+      <a class="btn" href="#destinations">Explore the destinations</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="destinations" class="destinations" aria-labelledby="dest-title">
+      <h2 id="dest-title">Top destinations</h2>
+      <div class="tiles" id="tiles"></div>
+    </section>
+
+    <div id="cities"></div>
+  </main>
+
+  <footer class="foot">
+    <p class="foot-brand">phos · Enlighten your mind, body &amp; soul.</p>
+    <p class="foot-note">More cities are on the way.</p>
+  </footer>
+
+  <noscript><p class="plain">Recommendations: Johnny's Speakeasy (Royal Oak), The Monarch Club (John R St) and The Royce (Downtown), Detroit.</p></noscript>
+  <script type="module" src="./food.js"></script>
+</body>
+</html>
