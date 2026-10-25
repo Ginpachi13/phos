@@ -18,7 +18,7 @@ const card = (p) => {
   const maps = safe(p.mapsUrl), site = safe(p.websiteUrl);
   return `
   <article class="card">
-    <p class="by">Recommended by <b>${esc(p.recommendedBy)}</b></p>
+    ${p.recommendedBy ? `<p class="by">Recommended by <b>${esc(p.recommendedBy)}</b></p>` : ''}
     <h3>${esc(p.name)}</h3>
     <p class="where"><span class="chip">${esc(p.type)}</span> ${esc(p.area)}</p>
     <p class="desc">${esc(p.description)}</p>

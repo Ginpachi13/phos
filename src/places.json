@@ -10,7 +10,6 @@
           "area": "Royal Oak",
           "type": "Cocktails & food",
           "description": "Cocktails and a full kitchen, with live performances.",
-          "recommendedBy": "Fadi",
           "mapsUrl": "https://maps.app.goo.gl/PkBmagyTZbBZyPDWA",
           "websiteUrl": "https://johnnysroyaloak.com/"
         },
@@ -19,7 +18,6 @@
           "area": "John R St",
           "type": "Rooftop lounge",
           "description": "An upscale rooftop lounge for sharing plates and drinks.",
-          "recommendedBy": "Fadi",
           "mapsUrl": "https://maps.app.goo.gl/TVw5Szp8QSbMXYWw6",
           "websiteUrl": "https://monarchclubdetroit.com/"
         },
@@ -28,7 +26,6 @@
           "area": "Downtown",
           "type": "Wine shop & bar",
           "description": "A wine shop and bar pouring international wines alongside small plates.",
-          "recommendedBy": "Fadi",
           "mapsUrl": "https://maps.app.goo.gl/UPkoKdvqESdjZup89",
           "websiteUrl": "https://www.theroycedetroit.com/"
         }
