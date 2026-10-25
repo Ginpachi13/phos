@@ -331,3 +331,6 @@ header { position: fixed; top: 32px; right: 40px; z-index: 30; opacity: 0; trans
 @media (pointer: fine) { .edge-glow { height: 18vh; } }
 /* captions and title lean with the gesture */
 .story-captions, .main-title-content { transform: translate3d(0, calc(var(--pull, 0) * -14px), 0); transition: transform .08s linear; }
+
+/* the row of chapter bars at the bottom is removed */
+.chapter-strip { display: none !important; }
