@@ -1,7 +1,6 @@
 import Lenis from 'lenis';
 import { Stage } from './stage.js';
 import { CHAPTERS, GOLD_STOPS } from './chapters.js';
-import { Sound } from './sound.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const html = document.documentElement;
@@ -69,7 +68,7 @@ document.querySelectorAll('[data-gold]').forEach((el) => letters(el, el.textCont
 
 /* ---------- stage ---------- */
 const stage = new Stage($('#stage'), CHAPTERS);
-const sound = new Sound();
+const sound = new Proxy({}, { get: () => () => {} });   // sound removed: every call is a no-op
 
 /* ---------- loader: real progress over fonts + scene media ---------- */
 const pctEl = $('#pct');
@@ -167,16 +166,9 @@ addEventListener('keydown', (e) => {
 // keep the right stop when the window changes size
 addEventListener('resize', () => { if (started) lenis.scrollTo(stops()[step], { immediate: true, force: true }); });
 
-/* ---------- play: step through the story on its own ---------- */
-const playBtn = $('[data-play]');
-function setPlay(on) {
-  playing = on; playTimer = performance.now();
-  playBtn.classList.toggle('on', on); playBtn.setAttribute('aria-pressed', String(on));
-  playBtn.querySelector('.pl-txt').textContent = on ? 'PAUSE' : 'PLAY';
-  if (on && step >= stops().length - 1) goTo(0, false);
-}
-playBtn.addEventListener('click', (e) => { e.stopPropagation(); if (!started) begin(); setPlay(!playing); });
-const PLAY_HOLD = 7000;   // ms on each stop
+/* ---------- play mode removed: the story only moves when the reader moves it ---------- */
+const setPlay = () => { playing = false; };
+const PLAY_HOLD = 7000;
 
 /* ---------- chapter strip: all 9 chapters, click to jump ---------- */
 const strip = $('.chapter-strip');
@@ -237,20 +229,12 @@ function begin() {
   landingOn(false);
   lenis.start();
   html.classList.add('begun');
-  sound.start();
-  $('[data-sound]').classList.add('is-playing'); $('[data-sound]').classList.remove('off'); $('[data-sound]').setAttribute('aria-pressed', 'true');
   $('.scroll-hint').classList.add('show');
 }
 startBtn.addEventListener('click', begin);
 ['pointerdown', 'keydown', 'touchend'].forEach((t) => addEventListener(t, () => sound.unlock && sound.unlock(), { passive: true }));
 // a click anywhere on the title also starts, so a missed click never strands the reader
 addEventListener('click', (e) => { if (!started && titleReady && !e.target.closest('header, .join-panel, .chapter-strip, #end-screen')) { begin(); goTo(1); } });
-
-/* ---------- sound toggle ---------- */
-$('[data-sound]').addEventListener('click', (e) => {
-  const b = e.currentTarget; const on = sound.toggle();
-  b.classList.toggle('is-playing', on); b.classList.toggle('off', !on); b.setAttribute('aria-pressed', String(on));
-});
 
 /* ---------- hold to illuminate ---------- */
 const reveal = $('.reveal');
