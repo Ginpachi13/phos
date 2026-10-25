@@ -231,12 +231,22 @@ export class Stage {
       const img = new Image(); img.decoding = 'async';
       img.onload = () => res(img); img.onerror = () => res(null); img.src = `${base}.jpg`;
     });
-    const v = hasVideo ? await tryVideo() : null;
-    if (v) { const tex = new THREE.VideoTexture(v); tex.colorSpace = THREE.SRGBColorSpace;
-      this.media[i] = { tex, el: v, w: v.videoWidth, h: v.videoHeight, kind: 'video' }; return true; }
+    // Stills first so the loader finishes quickly (phones can be slow to start video),
+    // then each clip swaps in once it has loaded. The first chapter starts at once, the rest a little later.
     const img = await tryImage();
     if (img) { const tex = new THREE.Texture(img); tex.needsUpdate = true; tex.colorSpace = THREE.SRGBColorSpace;
-      this.media[i] = { tex, el: img, w: img.naturalWidth, h: img.naturalHeight, kind: 'image' }; return true; }
+      this.media[i] = { tex, el: img, w: img.naturalWidth, h: img.naturalHeight, kind: 'image' }; }
+    const upgrade = async () => {
+      const v = await tryVideo();
+      if (!v) return false;
+      const tex = new THREE.VideoTexture(v); tex.colorSpace = THREE.SRGBColorSpace;
+      this.media[i] = { tex, el: v, w: v.videoWidth, h: v.videoHeight, kind: 'video' }; return true;
+    };
+    if (hasVideo) {
+      if (img) { setTimeout(upgrade, i === 0 ? 0 : 2500 + i * 400); return true; }
+      return upgrade();
+    }
+    if (img) return true;
     return false;
   }
 

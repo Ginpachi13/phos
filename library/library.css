@@ -103,9 +103,10 @@ a { color: inherit; }
 @media (max-width: 700px) {
   html, body { overflow: auto; height: auto; }
   .viewport, .back, .hint { display: none; }
-  .top-nav { top: 22px; left: 16px; font-size: 11px; }
+  .top-nav { top: 70px; left: 0; right: 0; flex-direction: row; flex-wrap: nowrap; gap: 20px; padding: 0 16px; overflow-x: auto; scrollbar-width: none; font-size: 11px; white-space: nowrap; }
+  .top-nav::-webkit-scrollbar { display: none; }
   .home { top: 18px; right: 16px; } .home svg { width: 84px; }
-  .list-view { display: block; padding: 250px 20px 80px; }
+  .list-view { display: block; padding: 130px 20px 80px; }
   .list-view h2 { margin: 36px 0 8px; font-family: var(--serif); font-weight: 400; font-size: 30px; }
   .list-view h2 b { font-family: var(--sans); font-size: 13px; color: var(--gold); margin-left: 8px; }
   .list-view ul { list-style: none; margin: 0; padding: 0; }
