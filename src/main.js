@@ -68,6 +68,8 @@ document.querySelectorAll('[data-gold]').forEach((el) => letters(el, el.textCont
 
 /* ---------- stage ---------- */
 const stage = new Stage($('#stage'), CHAPTERS);
+// Phones get the landing screen only: no story, no video, a short loader.
+const mobileLanding = matchMedia('(max-width: 767px)').matches;
 const sound = new Proxy({}, { get: () => () => {} });   // sound removed: every call is a no-op
 
 /* ---------- loader: real progress over fonts + scene media ---------- */
@@ -75,10 +77,10 @@ const pctEl = $('#pct');
 let shown = 0, target = 0;
 const wide = innerWidth / innerHeight > 1.15 && innerWidth > 980;
 if (wide) html.classList.add('carved');
-const jobs = [document.fonts.ready, ...CHAPTERS.map((c, i) => stage.loadMedia(i, i === 0 && wide ? '/scenes/01t' : `/scenes/${String(i + 1).padStart(2, '0')}`, !!c.video))];
+const jobs = [document.fonts.ready, ...CHAPTERS.slice(0, mobileLanding ? 1 : CHAPTERS.length).map((c, i) => stage.loadMedia(i, i === 0 && wide ? '/scenes/01t' : `/scenes/${String(i + 1).padStart(2, '0')}`, !!c.video && !mobileLanding))];
 let done = 0;
 jobs.forEach((j) => Promise.resolve(j).finally(() => { done++; target = done / jobs.length; }));
-const minTime = new Promise((r) => setTimeout(r, reduced ? 300 : 2600));
+const minTime = new Promise((r) => setTimeout(r, reduced || mobileLanding ? 400 : 2600));
 (function tickPct() {
   shown += (target - shown) * 0.08;
   pctEl.textContent = Math.round(shown * 100);
@@ -86,17 +88,19 @@ const minTime = new Promise((r) => setTimeout(r, reduced ? 300 : 2600));
 })();
 Promise.all([Promise.allSettled(jobs), minTime]).then(async () => {
   target = 1;
-  await wait(900);
+  await wait(mobileLanding ? 200 : 900);
   $('.loader-mark').classList.add('gone');
-  await wait(900);
-  loaderLine.classList.add('show');               // "This is a world made of light."
-  await wait(reduced ? 600 : 3200);
-  loaderLine.classList.remove('show'); loaderLine.classList.add('exit');
-  await wait(1200);
+  await wait(mobileLanding ? 300 : 900);
+  if (!mobileLanding) {
+    loaderLine.classList.add('show');               // "This is a world made of light."
+    await wait(reduced ? 600 : 3200);
+    loaderLine.classList.remove('show'); loaderLine.classList.add('exit');
+    await wait(1200);
+  }
   $('#loader').classList.add('fade-out');
   titleReady = true; html.classList.add('title-ready');   // scrolling works from this moment
   intro = 1;
-  await wait(1400);
+  await wait(mobileLanding ? 200 : 1400);
   html.classList.add('ui-on');
   $('.main-title-container').classList.add('show');
   subtitle.classList.add('show');
@@ -130,6 +134,7 @@ const lenis = new Lenis({
   duration: GLIDE, smoothWheel: true,
   virtualScroll: (data) => {
     const e = data.event;
+    if (mobileLanding) return false;            // no step-scroll on phones: the landing screen scrolls natively
     if (!started && titleReady && (e.type === 'wheel' || e.type === 'touchmove')) {
       if (e.cancelable) e.preventDefault();
       const d = Math.abs(data.deltaY) > Math.abs(data.deltaX) ? data.deltaY : data.deltaX;
@@ -223,7 +228,7 @@ function landingOn(on) {
   html.classList.toggle('landing', on);
 }
 function begin() {
-  if (started) return;
+  if (started || mobileLanding) return;
   started = true;
   startBtn.classList.remove('show'); startBtn.classList.add('hide');
   landingOn(false);
