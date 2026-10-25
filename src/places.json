@@ -48,6 +48,26 @@
           "type": "Cantonese roast meats",
           "description": "Cantonese siu mei roast meats from a mother-and-daughter brand with sites across the City and Canary Wharf.",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mama+Li%2C+Tower+Hill%2C+London"
+        },
+        {
+          "name": "Paro",
+          "area": "Covent Garden",
+          "type": "Indian",
+          "description": "An Indian restaurant at the Lyceum Theatre in Covent Garden.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Paro+Indian%2C+21+Wellington+St%2C+London",
+          "websiteUrl": "https://paroindian.com/",
+          "imageUrl": "https://paroindian.com/wp-content/uploads/2026/02/Paro-Indian-Banner-1.webp",
+          "imageAlt": "The corner entrance of Paro on Wellington Street, lit up at night under a green awning"
+        },
+        {
+          "name": "Uzumaki London",
+          "area": "Great Russell Street",
+          "type": "Anime-themed Japanese",
+          "description": "An anime-themed Japanese restaurant in central London serving ramen, sushi and bubble tea.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Uzumaki+London%2C+107+Great+Russell+St%2C+London",
+          "websiteUrl": "https://www.uzumakilondon.com/",
+          "imageUrl": "https://static.wixstatic.com/media/471e99_1b9133f399a94268b03c3a3c4ebf1f5c~mv2.jpg/v1/fill/w_1200,h_700,al_c,q_85/uzumaki.jpg",
+          "imageAlt": "A wooden table covered in ramen, katsu, dumplings, onigiri and edamame, with anime-style menus"
         }
       ]
     },
@@ -95,7 +115,9 @@
           "type": "Restaurant & bar",
           "description": "A Palm Springs restaurant that pays homage to the photographer Cecil Beaton.",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar+Cecil%2C+1555+S+Palm+Canyon+Dr%2C+Palm+Springs",
-          "websiteUrl": "https://barcecil.com/"
+          "websiteUrl": "https://barcecil.com/",
+          "imageUrl": "https://static.showit.co/1600/-LwIsSfCSVepVTptC_w-HA/shared/barcecil-hero.png",
+          "imageAlt": "A table seen from above with shrimp, fries, a salad, wine glasses and a Bar Cecil matchbox, in an illustrated style"
         },
         {
           "name": "Beaton's",
@@ -176,17 +198,124 @@
         {
           "name": "Lola 55",
           "area": "East Village",
-          "type": "Mexican",
-          "description": "A Mexican restaurant in the East Village with a Michelin Bib Gourmand.",
+          "type": "Tacos & cocktails",
+          "description": "Tacos and cocktails in the East Village, with a Michelin Bib Gourmand.",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lola+55%2C+1290+F+St%2C+San+Diego",
-          "websiteUrl": "https://lola55.com/"
+          "websiteUrl": "https://lola55.com/",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/5b43dc1e70e802b129f960e0/b44f270c-a0de-4130-9442-1408599690d2/6.png?format=1500w",
+          "imageAlt": "A chicken taco on a black plate with sliced cucumber and cilantro"
         },
         {
           "name": "Himitsu",
           "area": "La Jolla",
           "type": "Sushi bar",
           "description": "A sushi bar and Japanese bistro on Torrey Pines Road.",
-          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Himitsu%2C+1030+Torrey+Pines+Rd%2C+La+Jolla"
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Himitsu%2C+1030+Torrey+Pines+Rd%2C+La+Jolla",
+          "imageUrl": "https://static.wixstatic.com/media/06d077_35b6c3102e494810ba43c480b5693edf~mv2.jpg/v1/fill/w_1200,h_700,al_c,q_85/himitsu.jpg",
+          "imageAlt": "Three pieces of tuna nigiri on a wooden board beside soy sauce",
+          "websiteUrl": "https://www.himitsusd.com/"
+        }
+      ]
+    },
+    {
+      "id": "toronto",
+      "name": "Toronto",
+      "region": "Ontario, Canada",
+      "places": [
+        {
+          "name": "Earls Kitchen + Bar",
+          "area": "Several Toronto locations",
+          "type": "Kitchen + bar",
+          "description": "A Canadian restaurant group with several Toronto locations, including King West and the Financial District.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Earls+Kitchen+%2B+Bar%2C+Toronto"
+        },
+        {
+          "name": "Gyu-Kaku Japanese BBQ",
+          "area": "Church Street",
+          "type": "Japanese BBQ",
+          "description": "A Japanese BBQ chain where you grill meat, seafood and vegetables over a charcoal grill at your table.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Gyu-Kaku+Japanese+BBQ%2C+Toronto",
+          "websiteUrl": "https://www.gyu-kaku.com/",
+          "imageUrl": "https://www.gyu-kaku.com/wp-content/uploads/2015/11/Gyu-Kaku.jpg",
+          "imageAlt": "A flaming table grill surrounded by plates of marinated and bacon-wrapped meat"
+        }
+      ]
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "region": "Illinois, USA",
+      "places": [
+        {
+          "name": "Lula Cafe",
+          "area": "Logan Square",
+          "type": "Market-driven cafe",
+          "description": "Inventive, market-driven, mostly organic food in a casual space, known for its brunch, with a Michelin Bib Gourmand.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lula+Cafe%2C+2537+N+Kedzie+Blvd%2C+Chicago",
+          "websiteUrl": "https://www.lulacafe.com/",
+          "imageUrl": "https://images.getbento.com/accounts/7ddb4f625c4916181f9d829acbae6562/media/images/73830StockLula_1.jpg?w=1200&fit=max",
+          "imageAlt": "The door of Lula Cafe seen across a planter, with patio tables set behind it"
+        },
+        {
+          "name": "Beatnik on the River",
+          "area": "Wacker Drive",
+          "type": "Mediterranean",
+          "description": "A Mediterranean restaurant and cocktail bar on the Chicago River, with a large riverside patio.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Beatnik+on+the+River%2C+180+N+Wacker+Dr%2C+Chicago",
+          "websiteUrl": "https://beatnikontheriver.com/",
+          "imageUrl": "https://beatnikontheriver.com/wp-content/uploads/2024/11/home-hero.jpg",
+          "imageAlt": "Diners at a long table under hanging lanterns and flowering vines on a patio"
+        },
+        {
+          "name": "Perilla",
+          "area": "West Loop",
+          "type": "Korean-American",
+          "description": "Korean-American fare and steak in the West Loop, from the team behind Perilla Fare and Perilla Steakhouse.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Perilla+Fare%2C+West+Loop%2C+Chicago",
+          "websiteUrl": "https://www.perillachicago.com/"
+        }
+      ]
+    },
+    {
+      "id": "virginia",
+      "name": "Virginia",
+      "region": "USA",
+      "places": [
+        {
+          "name": "Izakaya Nana",
+          "area": "Chantilly",
+          "type": "Izakaya",
+          "description": "A Japanese izakaya and sake bar serving small dishes, yakitori and cocktails, and the Virginia branch of a Queens original.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Izakaya+Nana%2C+13882+Metrotech+Dr%2C+Chantilly+VA",
+          "websiteUrl": "https://www.izakayanana.com/"
+        }
+      ]
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco",
+      "region": "California, USA",
+      "places": [
+        {
+          "name": "Miller & Lux",
+          "area": "Mission Bay",
+          "type": "Restaurant",
+          "description": "A restaurant by Chase Center, listed in the Michelin guide.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Miller+%26+Lux%2C+700+Terry+A+Francois+Blvd%2C+San+Francisco"
+        }
+      ]
+    },
+    {
+      "id": "seattle",
+      "name": "Seattle",
+      "region": "Washington, USA",
+      "places": [
+        {
+          "name": "Kajiken",
+          "area": "Seattle",
+          "type": "Japanese noodles",
+          "description": "Brothless Japanese noodles (abura soba) from a chain that also has a San Mateo location.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Kajiken%2C+Seattle"
         }
       ]
     }
