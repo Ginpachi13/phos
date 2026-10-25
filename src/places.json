@@ -11,7 +11,9 @@
           "type": "Cocktails & food",
           "description": "Cocktails and a full kitchen, with live performances.",
           "mapsUrl": "https://maps.app.goo.gl/PkBmagyTZbBZyPDWA",
-          "websiteUrl": "https://johnnysroyaloak.com/"
+          "websiteUrl": "https://johnnysroyaloak.com/",
+          "imageUrl": "https://static.spotapps.co/website_images/ab_websites/186582_website_v1/food_back.jpg",
+          "imageAlt": "A bowl of fried calamari salad beside a cocktail and a seafood dish"
         },
         {
           "name": "The Monarch Club",
@@ -19,7 +21,9 @@
           "type": "Rooftop lounge",
           "description": "An upscale rooftop lounge for sharing plates and drinks.",
           "mapsUrl": "https://maps.app.goo.gl/TVw5Szp8QSbMXYWw6",
-          "websiteUrl": "https://monarchclubdetroit.com/"
+          "websiteUrl": "https://monarchclubdetroit.com/",
+          "imageUrl": "https://www.monarchclubdetroit.com/site/assets/files/14499/ham_20240509_032938-edit-edit_1.1200x0.jpg",
+          "imageAlt": "The lounge at The Monarch Club with red leather banquettes and candlelit tables"
         },
         {
           "name": "The Royce",
@@ -27,7 +31,162 @@
           "type": "Wine shop & bar",
           "description": "A wine shop and bar pouring international wines alongside small plates.",
           "mapsUrl": "https://maps.app.goo.gl/UPkoKdvqESdjZup89",
-          "websiteUrl": "https://www.theroycedetroit.com/"
+          "websiteUrl": "https://www.theroycedetroit.com/",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/6616a70c9aebda7da9b4880f/d3d7e20d-0497-4b10-8082-7e7262c78f17/mainfloor-7_reduced.jpg",
+          "imageAlt": "Wine shelves and bar stools inside The Royce"
+        }
+      ]
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "region": "United Kingdom",
+      "places": [
+        {
+          "name": "Mama Li",
+          "area": "Tower Hill, London Wall and Canary Wharf",
+          "type": "Cantonese roast meats",
+          "description": "Cantonese siu mei roast meats from a mother-and-daughter brand with sites across the City and Canary Wharf.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mama+Li%2C+Tower+Hill%2C+London"
+        }
+      ]
+    },
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "region": "Netherlands",
+      "places": [
+        {
+          "name": "CUE",
+          "area": "Utrechtsestraat",
+          "type": "Listening bar",
+          "description": "A restaurant upstairs and a vinyl listening bar below.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=CUE+Amsterdam%2C+Utrechtsestraat+30A%2C+Amsterdam",
+          "websiteUrl": "https://www.cue-amsterdam.com/"
+        },
+        {
+          "name": "The Social Hub",
+          "area": "Wibautstraat, Oost",
+          "type": "Hotel restaurant & bar",
+          "description": "A hotel in Amsterdam Oost with a restaurant and bar on the ground floor.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Social+Hub+Amsterdam+City%2C+Wibautstraat+129%2C+Amsterdam",
+          "websiteUrl": "https://www.thesocialhub.co/amsterdam-city/"
+        }
+      ]
+    },
+    {
+      "id": "palm-springs",
+      "name": "Palm Springs",
+      "region": "California, USA",
+      "places": [
+        {
+          "name": "Workshop Kitchen + Bar",
+          "area": "Uptown Design District",
+          "type": "Restaurant",
+          "description": "A Michelin-recommended restaurant in a 1926 building on North Palm Canyon Drive.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Workshop+Kitchen+%2B+Bar%2C+800+N+Palm+Canyon+Dr%2C+Palm+Springs",
+          "websiteUrl": "https://www.workshopkitchenbar.com/",
+          "imageUrl": "https://static1.squarespace.com/static/6917806f06632244d1dce3ce/t/693359c22a3a87116bf4cf51/1764972994751/01+Interior+shot.jpg?format=1500w",
+          "imageAlt": "A long concrete table between black booths, with a lit bar at the far end of Workshop Kitchen"
+        },
+        {
+          "name": "Bar Cecil",
+          "area": "South Palm Canyon Drive",
+          "type": "Restaurant & bar",
+          "description": "A Palm Springs restaurant that pays homage to the photographer Cecil Beaton.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar+Cecil%2C+1555+S+Palm+Canyon+Dr%2C+Palm+Springs",
+          "websiteUrl": "https://barcecil.com/"
+        },
+        {
+          "name": "Beaton's",
+          "area": "South Palm Canyon Drive",
+          "type": "Lounge",
+          "description": "The lounge next door to Bar Cecil, with a short menu of sharable dishes.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Beaton%27s+at+Bar+Cecil%2C+1555+S+Palm+Canyon+Dr%2C+Palm+Springs",
+          "websiteUrl": "https://beatonsatbarcecil.com/"
+        }
+      ]
+    },
+    {
+      "id": "boston",
+      "name": "Boston",
+      "region": "Massachusetts, USA",
+      "places": [
+        {
+          "name": "PAKU Katsuya",
+          "area": "Downtown Crossing",
+          "type": "Japanese",
+          "description": "A katsu-set restaurant in Downtown Crossing.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=PAKU+Katsuya%2C+Downtown+Crossing%2C+Boston"
+        },
+        {
+          "name": "Lê Madeline",
+          "area": "Quincy",
+          "type": "Modern Vietnamese",
+          "description": "Chef Peter Nguyen's modern take on Vietnamese food, named Boston Magazine's best restaurant in the South in 2024.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Le+Madeline%2C+409+Hancock+St%2C+Quincy+MA",
+          "websiteUrl": "https://www.lemadeline.com/",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/6535a38c22bbec78627222f2/ccf7a5df-21e7-458a-aa41-561a1c875927/le+Madeline_69+-+WEB+RES.jpg?format=1000w",
+          "imageAlt": "A table shared by many diners, covered in Vietnamese dishes seen from above"
+        },
+        {
+          "name": "Bayao Cafe",
+          "area": "Quincy",
+          "type": "Hong Kong-style cafe",
+          "description": "A Hong Kong-style cafe on Hancock Street in Quincy.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bayao+Cafe%2C+429+Hancock+St%2C+Quincy+MA"
+        },
+        {
+          "name": "Marcelino's",
+          "area": "Seaport",
+          "type": "Middle Eastern & cocktails",
+          "description": "Middle Eastern dishes and cocktails in the Seaport, from the team behind Marcelino's Boutique Bar in Providence.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Marcelino%27s%2C+2+Northern+Ave%2C+Boston"
+        }
+      ]
+    },
+    {
+      "id": "san-diego",
+      "name": "San Diego",
+      "region": "California, USA",
+      "places": [
+        {
+          "name": "Born & Raised",
+          "area": "Little Italy",
+          "type": "Steakhouse",
+          "description": "A split-level, art deco steakhouse serving Creekstone Farms beef, dry-aged in a glass meat locker.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Born+%26+Raised%2C+1909+India+St%2C+San+Diego",
+          "websiteUrl": "https://bornandraisedsteak.com/"
+        },
+        {
+          "name": "A.R. Valentien",
+          "area": "La Jolla",
+          "type": "Fine dining",
+          "description": "Regional cuisine at The Lodge at Torrey Pines, overlooking the golf course and the Pacific.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=A.R.+Valentien%2C+11480+N+Torrey+Pines+Rd%2C+La+Jolla",
+          "websiteUrl": "https://www.lodgetorreypines.com/dine"
+        },
+        {
+          "name": "Morning Glory",
+          "area": "Little Italy",
+          "type": "Brunch",
+          "description": "A Little Italy brunch spot known for its Japanese soufflé pancakes.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Morning+Glory%2C+550+W+Date+St%2C+San+Diego"
+        },
+        {
+          "name": "Lola 55",
+          "area": "East Village",
+          "type": "Mexican",
+          "description": "A Mexican restaurant in the East Village with a Michelin Bib Gourmand.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lola+55%2C+1290+F+St%2C+San+Diego",
+          "websiteUrl": "https://lola55.com/"
+        },
+        {
+          "name": "Himitsu",
+          "area": "La Jolla",
+          "type": "Sushi bar",
+          "description": "A sushi bar and Japanese bistro on Torrey Pines Road.",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Himitsu%2C+1030+Torrey+Pines+Rd%2C+La+Jolla"
         }
       ]
     }
