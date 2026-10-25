@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Library · phos</title>
+  <meta name="description" content="The phos library: books read, loved and waiting. Step into the room.">
+  <meta name="theme-color" content="#030304">
+  <style>html,body{background:#030304;color:#F3EBD8}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./library.css">
+</head>
+<body>
+  <nav class="top-nav" aria-label="Site">
+    <a href="/about">About</a><a href="/library/" aria-current="page">Library</a><a href="/journal">Journal</a><a href="/videos">Videos</a><a href="/art-and-history">Art and History</a><a href="/services">Services</a><a href="/food-and-drinks">Food and Drinks</a><a href="/contact">Contact</a>
+  </nav>
+  <a class="home" href="/" aria-label="phos home">
+    <svg viewBox="0 0 260 64" aria-hidden="true"><path class="lens" d="M4 32 Q130 -4 256 32 Q130 68 4 32Z" /><text x="130" y="43" text-anchor="middle">phos</text></svg>
+  </a>
+
+  <button class="back" type="button" hidden>← Back to the room</button>
+
+  <div class="viewport" id="viewport">
+    <div class="fit" id="fit">
+      <div class="stage" id="stage">
+        <div class="camera" id="camera">
+          <div class="wall"></div>
+          <div class="floor"></div>
+          <div class="window" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="beam b1" aria-hidden="true"></div>
+          <div class="beam b2" aria-hidden="true"></div>
+          <div class="pool" aria-hidden="true"></div>
+          <div id="room"></div>
+        </div>
+        <div class="vignette" aria-hidden="true"></div>
+      </div>
+    </div>
+    <p class="hint" id="hint">Choose a shelf, the table or the crate to step closer.</p>
+  </div>
+
+  <!-- Small screens: the same shelves as a list -->
+  <div class="list-view" id="list-view"></div>
+
+  <div class="tip" id="tip" role="tooltip" hidden></div>
+
+  <aside class="card" id="card" aria-live="polite" hidden>
+    <button class="card-close" type="button" aria-label="Close">×</button>
+    <p class="card-shelf" id="card-shelf"></p>
+    <h2 class="card-title" id="card-title"></h2>
+    <p class="card-sub" id="card-sub"></p>
+    <p class="card-author" id="card-author"></p>
+    <p class="card-stars" id="card-stars"></p>
+    <p class="card-meta" id="card-meta"></p>
+    <a class="card-buy" id="card-buy" href="#" target="_blank" rel="sponsored noopener noreferrer">View on Amazon ↗</a>
+    <p class="card-disclosure">As an Amazon Associate I earn from qualifying purchases, at no extra cost to you. I only recommend what I'd give to a friend.</p>
+  </aside>
+
+  <noscript><p class="plain">The phos library is a room of shelves. Please turn on JavaScript to walk in.</p></noscript>
+  <script type="module" src="./library.js"></script>
+</body>
+</html>

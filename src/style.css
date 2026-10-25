@@ -58,6 +58,12 @@ a { color: inherit; }
 .logo-header.end { opacity: 0; transition: opacity 1s ease; }
 header { position: fixed; top: 32px; right: 40px; z-index: 30; opacity: 0; transition: opacity .6s var(--ease); pointer-events: none; display: flex; gap: 8px; align-items: center; }
 .ui-on header { opacity: 1; pointer-events: auto; }
+.top-nav { position: fixed; top: 44px; left: 40px; z-index: 30; display: flex; flex-wrap: wrap; gap: 8px 22px; max-width: calc(100vw - 260px); opacity: 0; pointer-events: none; transition: opacity .6s var(--ease); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+.ui-on .top-nav { opacity: 1; pointer-events: auto; }
+.top-nav a { color: var(--cream); text-decoration: none; padding: 6px 0; text-shadow: 0 1px 12px rgba(0, 0, 0, .6); transition: color .3s; }
+.top-nav a:hover, .top-nav a:focus-visible { color: var(--gold); }
+@media (max-width: 1100px) { .top-nav { flex-direction: column; flex-wrap: nowrap; gap: 2px; max-width: none; } }
+@media (max-width: 767px) { .top-nav { top: 22px; left: 16px; font-size: 11px; } }
 .sound-toggle { display: flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: .08em; padding: 12px; }
 .sound-icon { display: flex; gap: 3px; align-items: flex-end; height: 16px; transition: transform .5s ease; }
 .sound-toggle .bar { width: 1px; height: 16px; background: var(--cream); transform: scaleY(.1); transition: transform .35s ease; }
